@@ -1,6 +1,6 @@
 # PokeDecks
 
-PokeDecks USer Story
+PokeDecks User Story
 Users can register
 Users can search for a pokemon card
 Users can access a favorites list
