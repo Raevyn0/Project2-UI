@@ -9,10 +9,6 @@ User can add and remove pokemon cards from their deck
 (Admin) User can view favorite's list cards of all users
 (Admin) User can view decks of all users
 
-
-
-BRANCH 1
-
 12:38
 User can logout/delete account
 12:40
