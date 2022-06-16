@@ -2,7 +2,7 @@ interface IDashboard {
 
 }
 
-function Dashboard () {
+function Dashboard (props: IDashboard) {
 
 }
 
