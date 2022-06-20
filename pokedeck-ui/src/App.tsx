@@ -4,6 +4,7 @@ import './App.css';
 import Login from "./components/Login"
 import { User } from './models/user';
 import PokemonSearch from './components/PokemonSearch';
+import Dashboard from './components/Dashboard';
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
     <div className="App">
       {/* <PokemonSearch /> */}
       <Login currentUser={authUser} setCurrentUser={setAuthUser}/>
+      <Dashboard currentUser={undefined}/>
     </div>
   );
 }
