@@ -1,4 +1,5 @@
 import { SyntheticEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { User } from "../models/user";
 
 interface IRegisterProps {
@@ -34,7 +35,6 @@ function Register(props: IRegisterProps){
     } catch(e){
         //exception
     }
-
 
     return(
         <>
