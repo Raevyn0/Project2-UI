@@ -1,5 +1,4 @@
 import { User } from "../models/user";
-import { Navigate } from "react-router-dom";
 import { Grid } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
@@ -21,9 +20,9 @@ const Item = styled(Paper)(({ theme }) => ({
 
 function Dashboard (props: IDashboard) {
     return (
-        !props.currentUser ? <Navigate to="/login"/> :
+      
         <>
-            <h1>Welcome, {props.currentUser.username}!</h1>
+            <h1>Welcome to your PokeDeck Trainer!</h1>
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 <Grid item xs={6}>
                     <Item>1</Item>

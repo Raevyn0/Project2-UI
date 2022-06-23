@@ -5,6 +5,7 @@ import Login from "./components/Login"
 import { User } from './models/user';
 import PokemonSearch from './components/PokemonSearch';
 import Dashboard from './components/Dashboard';
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
     <div className="App">
       {/* <PokemonSearch /> */}
       <Login currentUser={authUser} setCurrentUser={setAuthUser}/>
-      <Dashboard currentUser={undefined}/>
+     
     </div>
   );
 }
