@@ -22,7 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Login currentUser={authUser} setCurrentUser={setAuthUser}/>}/>
         <Route path="/register" element={<Register/>}/>
-        {/* <Route path="/dashboard" element={<Dashboard/>}/> */}
+         <Route path="/dashboard" element={<Dashboard currentUser={undefined}/>}/> 
         <Route path="/search" element={<PokemonSearch/>}/>
       </Routes>
       
