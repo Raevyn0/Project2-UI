@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 import Login from "./components/Login"
 import { User } from './models/user';
@@ -8,6 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import Register from './components/Register';
 import Navigation from './components/Navigation';
 import Dashboard from './components/Dashboard';
+import Favorites from './components/FavoritesDeck';
 
 
 
@@ -26,6 +26,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         {/* <Route path="/dashboard" element={<Dashboard/>}/> */}
         <Route path="/search" element={<PokemonSearch/>}/>
+        <Route path="/favorites" element={<Favorites userId={authUser?.id}/>}/>
       </Routes>
       
     </div>
