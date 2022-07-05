@@ -9,6 +9,8 @@ import Register from './components/Register';
 import Navigation from './components/Navigation';
 import Dashboard from './components/Dashboard';
 
+
+
 function App() {
 
   const [authUser, setAuthUser] = useState<User>();
