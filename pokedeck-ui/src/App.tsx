@@ -27,7 +27,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         {/* <Route path="/dashboard" element={<Dashboard/>}/> */}
         <Route path="/search" element={<PokemonSearch/>}/>
-        <Route path="/  " element={<Favorites userId={authUser?.id}/>}/>
+        <Route path="/  " element={<Favorites userId={authUser?.userAuthId}/>}/>
       </Routes>
       
     </div>
