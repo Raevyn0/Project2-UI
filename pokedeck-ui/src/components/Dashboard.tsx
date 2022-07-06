@@ -34,7 +34,7 @@ function Dashboard (props: IDashboard) {
                     </Item>
                         </Grid>
                         <Grid item xs={6}>
-                        <Item>2</Item>
+                        <Item><button onClick={() => navigate('/favorites')}>Look at your favorites</button></Item>
                             </Grid>
                     <Grid item xs={6}>
                         <Item>3</Item>
