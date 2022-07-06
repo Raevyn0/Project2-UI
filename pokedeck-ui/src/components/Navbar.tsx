@@ -12,8 +12,12 @@ function Navbar(props: INavbarProps) {
 
     const navigate = useNavigate();
 
+    const logoutText = "Logout";
+
+
     function logout() {
         console.log('logout not implemented yet');
+        console.log(props.currentUser?.username);
     }
 
     return (
@@ -31,7 +35,12 @@ function Navbar(props: INavbarProps) {
                                         <Typography variant="h6" color="inherit" onClick={() => navigate('/dashboard')}>Dashboard</Typography>
                                     </ListItemText>
                                     <ListItemText inset>
-                                        <Typography variant="h6" color="inherit" onClick={logout}>Logout</Typography>
+                                        <Typography variant="h6" color="inherit" onClick={logout}>{logoutText}</Typography>
+                                    </ListItemText>
+                                    <ListItemText inset>
+                                        <Typography variant="h6" color="inherit">
+                                            {props.currentUser.username}
+                                        </Typography>
                                     </ListItemText>
                                 </>
                                 :

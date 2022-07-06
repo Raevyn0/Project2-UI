@@ -32,7 +32,7 @@ function Login(props: ILoginProps) {
         }
 
         try {
-            let resp = await  fetch('URL WHEN WE GET IT', {
+            let resp = await  fetch('http://localhost:5000/pokedecks/auth', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
@@ -43,7 +43,7 @@ function Login(props: ILoginProps) {
             if (resp.status != 200) {
                 setErr("Invalid username and password");
             } else {
-                console.log(resp.headers.get("Set-Cookie"))
+                console.log(`User ${username} logged in!`);
                 props.setCurrentUser(await resp.json());
             }
 
