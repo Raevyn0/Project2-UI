@@ -14,7 +14,6 @@ const DummyData = [
 const [data, setData] = useState (DummyData)
 console.log(data)
     return(
-         
         <>
             
             <h1>Favorites</h1>
