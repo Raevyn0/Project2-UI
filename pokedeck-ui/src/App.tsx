@@ -18,14 +18,21 @@ function App() {
   const [authUser, setAuthUser] = useState<User>();
   const [userData, setUserData] = useState<UserData[]>([]);
 
-
+  
   useEffect(() => {
-    fetch('http://localhost:5000/pokedecks/users')
-    .then(res => res.json())
-    .then(payload => setUserData(payload.data as UserData[]))
-  })
+
+    if(authUser) {
+      // @ts-ignore
+      fetch(`http://localhost:5000/pokedecks/users/id/${authUser.userAuthId}`)
+      .then(res => res.json())
+      .then(data => setUserData(data))
+      //.then(payload => setUserData(payload.data as UserData[]))
+    }
+  }, [authUser])
+
 
   console.log(userData);
+  console.log(authUser)
   
   return (
     <div className="App">
@@ -38,7 +45,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/dashboard" element={<Dashboard currentUser={authUser}/>}/> 
         <Route path="/search" element={<PokemonSearch/>}/>
-        <Route path="/  " element={<Favorites userId={authUser?.id}/>}/>
+        <Route path="/  " element={<Favorites userId={authUser?.userAuthId}/>}/>
       </Routes>
       
     </div>
