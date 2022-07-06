@@ -9,7 +9,7 @@ import Navigation from './components/Navbar';
 import Dashboard from './components/Dashboard';
 import Favorites from './components/FavoritesDeck';
 import { UserData } from './models/userData';
-
+import AllUsers from './components/AllUsers';
 
 
 function App() {
@@ -45,7 +45,8 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/dashboard" element={<Dashboard currentUser={authUser}/>}/> 
         <Route path="/search" element={<PokemonSearch/>}/>
-        <Route path="/  " element={<Favorites userId={authUser?.userAuthId}/>}/>
+        <Route path="/favorites " element={<Favorites userId={authUser?.userAuthId}/>}/>
+        <Route path="/allUsers" element={<AllUsers />} />
       </Routes>
       
     </div>

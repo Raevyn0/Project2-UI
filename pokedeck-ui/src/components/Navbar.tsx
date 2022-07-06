@@ -19,7 +19,6 @@ function Navbar(props: INavbarProps) {
         console.log('logout not implemented yet');
         console.log(props.currentUser?.username);
     }
-    console.log('INSIDE NAV', props.currentUser?.userAuthRole);
 
     return (
         <AppBar color="primary" position="static">
@@ -57,7 +56,7 @@ function Navbar(props: INavbarProps) {
                                 :
                                 <>
                                     <ListItemText inset>
-                                        <Typography variant="h6" color="inherit" onClick={() => navigate('/login')}>Login</Typography>
+                                        <Typography variant="h6" color="inherit" onClick={() => navigate('/')}>Login</Typography>
                                     </ListItemText>
                                     <ListItemText inset>
                                         <Typography variant="h6" color="inherit">
