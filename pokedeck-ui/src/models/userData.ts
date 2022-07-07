@@ -1,8 +1,8 @@
 export type UserData = {
-    id: number;
+    userId: number;
     email: string;
     username: string;
     role: number;
-    favoriteCardsUserId: []
+    favoriteCardsId: []
 
 }

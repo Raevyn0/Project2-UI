@@ -1,11 +1,11 @@
 export class User {
-    userAuthId: number;
+    userAuthId: number | undefined;
     username: string;
-    userRoleId: string;
+    userAuthRole: number;
     
-    constructor(id: number, un: string, roleid: string) {
+    constructor(id: number, un: string, roleid: number) {
         this.userAuthId = id;
         this.username = un;
-        this.userRoleId = roleid;
+        this.userAuthRole = roleid;
     }
 }
