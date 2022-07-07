@@ -1,7 +1,7 @@
 import { SyntheticEvent, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { User } from "../models/user";
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {Navigate, useNavigate} from "react-router-dom";
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -24,6 +24,8 @@ const theme = createTheme();
 
 function Register(props: IRegisterProps){
 
+    const navigate = useNavigate();
+
     let [username, setUser] = useState('');
     let [password, setPass] = useState('');
     let [email, setEmail] = useState('');
@@ -42,10 +44,26 @@ function Register(props: IRegisterProps){
         }
     }
 
-    let register = (e: SyntheticEvent) => {
+    let register = async (e: SyntheticEvent) => {
         if(!username || !password){
             if(!username)   setErrMsg('Please enter a username!');
             else setErrMsg('Please enter a password!');
+        }
+
+        try {
+            await fetch('http://localhost:5000/pokedecks/users', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({email, username, password})
+            });
+
+            navigate('/');
+        }
+        catch(e: any){
+            setErrMsg(e.message);
+            console.log(e.message);
         }
     }
 
@@ -97,10 +115,10 @@ function Register(props: IRegisterProps){
                             </Grid>
                         </Grid>
                         <Button
-                            type="submit"
                             fullWidth
                             variant="contained"
                             sx={{ mt: 3, mb: 2 }}
+                            onClick={register}
                         >
                             Sign Up
                         </Button>

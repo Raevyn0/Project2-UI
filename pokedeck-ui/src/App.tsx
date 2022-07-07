@@ -45,12 +45,8 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/dashboard" element={<Dashboard currentUser={authUser}/>}/> 
         <Route path="/search" element={<PokemonSearch/>}/>
-<<<<<<< HEAD
-        <Route path="/  " element={<Favorites userId={authUser?.userAuthId}/>}/>
-=======
         <Route path="/favorites " element={<Favorites userId={authUser?.userAuthId}/>}/>
         <Route path="/allUsers" element={<AllUsers />} />
->>>>>>> a8a391854f4f543f1dc8e67296b9bb0e5ffbee90
       </Routes>
       
     </div>
