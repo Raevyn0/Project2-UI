@@ -37,6 +37,16 @@ function Navbar(props: INavbarProps) {
                                     <ListItemText inset>
                                         <Typography variant="h6" color="inherit" onClick={logout}>{logoutText}</Typography>
                                     </ListItemText>
+                                    { 
+                                    props.currentUser.userAuthRole === 1
+                                    ?
+                                    <ListItemText inset>
+                                        <Typography variant="h6" color="inherit" onClick={() => {navigate("/allUsers")}}>All Users</Typography>
+                                    </ListItemText>
+                                    :
+                                    <>
+                                    </>
+                                    }
                                     <ListItemText inset>
                                         <Typography variant="h6" color="inherit">
                                             {props.currentUser.username}
@@ -46,7 +56,7 @@ function Navbar(props: INavbarProps) {
                                 :
                                 <>
                                     <ListItemText inset>
-                                        <Typography variant="h6" color="inherit" onClick={() => navigate('/login')}>Login</Typography>
+                                        <Typography variant="h6" color="inherit" onClick={() => navigate('/')}>Login</Typography>
                                     </ListItemText>
                                     <ListItemText inset>
                                         <Typography variant="h6" color="inherit">

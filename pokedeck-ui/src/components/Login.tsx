@@ -1,5 +1,5 @@
 import { SyntheticEvent, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { getTokenSourceMapRange } from "typescript";
 import { User } from "../models/user";
 
@@ -9,6 +9,8 @@ interface ILoginProps {
 }
 
 function Login(props: ILoginProps) {
+
+    const navigate = useNavigate();
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -45,11 +47,13 @@ function Login(props: ILoginProps) {
             } else {
                 console.log(`User ${username} logged in!`);
                 props.setCurrentUser(await resp.json());
+                navigate("/dashboard")
             }
 
         } catch (err) {
             console.log(err);
         }
+
 
     }
 
