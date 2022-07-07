@@ -11,7 +11,6 @@ import Favorites from './components/FavoritesDeck';
 import { UserData } from './models/userData';
 import AllUsers from './components/AllUsers';
 
-
 function App() {
 
 
@@ -29,10 +28,6 @@ function App() {
       //.then(payload => setUserData(payload.data as UserData[]))
     }
   }, [authUser])
-
-
-  console.log(userData);
-  console.log(authUser)
   
   return (
     <div className="App">
@@ -45,7 +40,7 @@ function App() {
         <Route path="/register" element={<Register/>}/>
         <Route path="/dashboard" element={<Dashboard currentUser={authUser}/>}/> 
         <Route path="/search" element={<PokemonSearch/>}/>
-        <Route path="/favorites " element={<Favorites userId={authUser?.userAuthId}/>}/>
+        <Route path="/favorites" element={<Favorites userId={authUser?.userAuthId}/>}/>
         <Route path="/allUsers" element={<AllUsers />} />
       </Routes>
       
