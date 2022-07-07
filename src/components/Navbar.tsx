@@ -14,7 +14,6 @@ function Navbar(props: INavbarProps) {
 
     const logoutText = "Logout";
 
-
     function logout() {
         console.log('logout not implemented yet');
         console.log(props.currentUser?.username);

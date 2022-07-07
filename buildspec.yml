@@ -1,16 +1,17 @@
 version: 0.2
-  phases:
-    install:
-      runtime-versions:
-        nodejs: latest
-     pre-build:
-        commands:
-          - npm install
-     build:
-         commands:
-          - npm run build
 
-    artifacts:
-      files:
-      - '**/*'
-    base-directory: 'build'
+phases:
+  install:
+    runtime-versions:
+      nodejs: latest
+  pre-build:
+    commands:
+    - npm install
+  build:
+    commands:
+    - npm run build
+
+artifacts:
+  files:
+  - '**/*'
+  base-directory: 'build'
