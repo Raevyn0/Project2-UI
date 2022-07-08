@@ -51,7 +51,7 @@ function Register(props: IRegisterProps){
         }
 
         try {
-            await fetch('http://localhost:5000/pokedecks/users', {
+            await fetch('http://project2api-env.eba-hirmx2sb.us-west-1.elasticbeanstalk.com/pokedecks/users', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
