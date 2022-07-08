@@ -34,7 +34,7 @@ function Login(props: ILoginProps) {
         }
 
         try {
-            let resp = await  fetch('http://localhost:5000/pokedecks/auth', {
+            let resp = await  fetch('http://project2api-env.eba-hirmx2sb.us-west-1.elasticbeanstalk.com/pokedecks/auth', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
