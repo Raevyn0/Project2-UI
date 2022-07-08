@@ -22,7 +22,7 @@ function App() {
 
     if(authUser) {
       // @ts-ignore
-      fetch(`http://localhost:5000/pokedecks/users/id/${authUser.userAuthId}`)
+      fetch(`http://project2api-env.eba-hirmx2sb.us-west-1.elasticbeanstalk.com/pokedecks/users/id/${authUser.userAuthId}`)
       .then(res => res.json())
       .then(data => setUserData(data))
       //.then(payload => setUserData(payload.data as UserData[]))
