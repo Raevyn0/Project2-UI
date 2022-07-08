@@ -11,7 +11,7 @@ function AllUsers() {
 
     useEffect(() => {
 
-        fetch(`http://localhost:5000/pokedecks/users`)
+        fetch(http://project2api-env.eba-hirmx2sb.us-west-1.elasticbeanstalk.com/pokedecks/users`)
         .then(res => res.json())
         .then(payload => setUsers(payload as UserData[]))
 
