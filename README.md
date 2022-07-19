@@ -14,5 +14,4 @@ User can logout/delete account
 12:40
 (Admin) User can delete any other user accounts
 
-TELL TYPESCRIPT TO SHUT UP
-// @ts-ignore
+https://github.com/Raevyn0/Project2-API
